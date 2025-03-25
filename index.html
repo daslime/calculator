@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom-alert.css">
 </head>
 <body>
    
     <div class="container">
-        <p class="name">CASIO FX Y-23</p>
+        <p class="name">CASIO fx-991EX</p>
         <div class="display-container">
             <div class="calculation-display">0</div>
             <input type="text" class="display" disabled value="0">
+        </div>
+        <div class="history-toggle" onclick="toggleHistory()">
+            <span class="history-icon">📋</span> History
+        </div>
+        <div class="history-panel">
+            <div class="history-title">Calculation History</div>
+            <div class="history-list" id="historyList"></div>
+            <button class="history-clear-btn" onclick="clearHistory()">Clear History</button>
         </div>
         <div class="buttons">
             <button class="btn clear" onclick="clearDisplay()">C</button>
@@ -42,5 +51,6 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="custom-alert.js"></script>
 </body>
 </html>
